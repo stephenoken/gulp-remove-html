@@ -1,0 +1,30 @@
+{
+  "name": "gulp-remove-html",
+  "version": "1.0.0",
+  "description": "Remove HTML code when code the files go into production. For example remove calls to scripts that are used only in development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenoken/gulp-remove-html.git"
+  },
+  "keywords": [
+    "Gulp",
+    "Remove",
+    "Code",
+    "Remove",
+    "HTML"
+  ],
+  "author": "stephenoken@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stephenoken/gulp-remove-html/issues"
+  },
+  "homepage": "https://github.com/stephenoken/gulp-remove-html#readme",
+  "dependencies": {
+    "gulp-util": "^3.0.6",
+    "through2": "^2.0.0"
+  }
+}
