@@ -1,5 +1,5 @@
 # gulp-remove-html
-Remove HTML code when code the files go into production.
+Remove HTML code when the html files go into production.
 ## Usage
 
 First, install `gulp-remove-html` as a development dependency:
