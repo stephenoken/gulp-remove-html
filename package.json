@@ -1,7 +1,7 @@
 {
   "name": "gulp-remove-html",
   "version": "1.0.0",
-  "description": "Remove HTML code when code the files go into production. For example remove calls to scripts that are used only in development",
+  "description": "Remove HTML code when the files go into production.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
