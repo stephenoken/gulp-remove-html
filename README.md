@@ -20,6 +20,23 @@ gulp.task('build-prod', function () {
     .pipe(gulp.dest('dist/views'));
 });
 ```
+In your html file surround the code you want removed with the `<!--<Deject>-->` tag.
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <p>
+      Important content!!!
+    </p>
+    <!--<Deject>-->
+        <p>Shouldn't be here!!!!!</p>
+    <!--</Deject>-->
+  </body>
+</html>
+```
 ## Changelog
 
 #####1.0.0
