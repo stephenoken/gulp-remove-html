@@ -41,3 +41,6 @@ In your html file surround the code you want removed with the `<!--<Deject>-->` 
 
 #####1.0.0
 - initial release
+
+#####1.0.2
+- added tests
