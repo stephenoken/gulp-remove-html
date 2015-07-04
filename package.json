@@ -4,7 +4,7 @@
   "description": "Remove HTML code when the files go into production.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
