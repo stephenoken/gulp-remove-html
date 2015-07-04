@@ -1,6 +1,6 @@
 {
   "name": "gulp-remove-html",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Remove HTML code when the files go into production.",
   "main": "index.js",
   "scripts": {
