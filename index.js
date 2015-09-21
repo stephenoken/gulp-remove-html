@@ -26,7 +26,6 @@ function gulpRemoveHtml(){
                 indices.push(result.index);
               }
             }
-            console.log(indices);
             if (indices.length === 0) {
               this.emit('error', new PluginError(PLUGIN_NAME, 'File does not contain the right tag'));
               return cb();
@@ -37,24 +36,7 @@ function gulpRemoveHtml(){
               var endOfFile  = processedFile.substring(popIndice(),processedFile.length);
               processedFile = processedFile.substring(0,popIndice()).concat(endOfFile);
             }
-            console.log(processedFile);
             chunk.contents = new Buffer(processedFile);
-            //Old way
-            // var dejectResult = dejectPatternRegex.exec(fileContents);
-            // if(dejectResult == null){
-            //     this.emit('error', new PluginError(PLUGIN_NAME, 'File does not contain the right tag'));
-            //     return cb();
-            // }
-            // /*
-            // The exec() method is called a second time to find the closing tag.
-            // */
-            // dejectPatternRegex.exec(fileContents);
-            //
-            // var processedFile = fileContents.substring(0,dejectResult.index);
-            // processedFile = processedFile.concat(fileContents.substring(dejectPatternRegex.lastIndex,fileContents.length));
-            // chunk.contents = new Buffer(processedFile);
-            // console.log(dejectResult.index);
-            // console.log(dejectPatternRegex.lastIndex);
         }
         this.push(chunk);
         cb();

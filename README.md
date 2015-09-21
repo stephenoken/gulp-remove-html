@@ -44,5 +44,6 @@ In your html file surround the code you want removed with the `<!--<Deject>-->` 
 
 #####1.0.2
 - added tests
+
 #####1.1.0
 - supports the deject tag being used more than once
