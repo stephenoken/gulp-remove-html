@@ -11,11 +11,11 @@
     "url": "git+https://github.com/stephenoken/gulp-remove-html.git"
   },
   "keywords": [
-    "Gulp",
-    "Remove",
-    "Code",
-    "Remove",
-    "HTML"
+    "gulpplugin",
+    "remove",
+    "code",
+    "remove",
+    "html"
   ],
   "author": "stephenoken@gmail.com",
   "license": "MIT",

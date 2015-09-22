@@ -1,7 +1,7 @@
 var gutil = require('gulp-util');
 var through2 = require('through2');
 var PluginError = gutil.PluginError;
-const PLUGIN_NAME = 'gulp-remove-html';
+var PLUGIN_NAME = 'gulp-remove-html';
 var indices = [];
 
 function gulpRemoveHtml(){
@@ -18,7 +18,7 @@ function gulpRemoveHtml(){
             NOTE That these tags must be commented out for the plugin to reconise them.
             */
             var dejectPatternRegex =/<!--\s*<(?:\/)?[Deject]+>\s*-->/ig;
-
+            var result;
             while ((result = dejectPatternRegex.exec(fileContents))) {
               if (indices.length % 2) {
                 indices.push(dejectPatternRegex.lastIndex);
@@ -31,12 +31,11 @@ function gulpRemoveHtml(){
               return cb();
             }
 
-            var processedFile = fileContents;
             while(indices.length != 0){
-              var endOfFile  = processedFile.substring(popIndice(),processedFile.length);
-              processedFile = processedFile.substring(0,popIndice()).concat(endOfFile);
+              var endOfFile  = fileContents.substring(popIndice(),fileContents.length);
+              fileContents = fileContents.substring(0,popIndice()).concat(endOfFile);
             }
-            chunk.contents = new Buffer(processedFile);
+            chunk.contents = new Buffer(fileContents);
         }
         this.push(chunk);
         cb();
