@@ -37,6 +37,12 @@ In your html file surround the code you want removed with the `<!--<Deject>-->` 
   </body>
 </html>
 ```
+
+## Options
+- `dejectPatternRegex`
+
+      Pass in a new regex expression to override `<!--<Deject>-->`
+
 ## Changelog
 
 #####1.0.0
@@ -47,3 +53,6 @@ In your html file surround the code you want removed with the `<!--<Deject>-->` 
 
 #####1.1.0
 - supports the deject tag being used more than once
+
+#####1.2.0
+- regex pattern is now configurable
