@@ -42,6 +42,9 @@ In your html file surround the code you want removed with the `<!--<Deject>-->` 
 - `dejectPatternRegex`
 
       Pass in a new regex expression to override `<!--<Deject>-->`
+- `keyword`
+
+      Pass in a new keyword to override `Deject`. ie `<!--<RemoveWhatIsBetweenThisTags-->`
 
 ## Changelog
 

@@ -5,7 +5,7 @@ var PLUGIN_NAME = 'gulp-remove-html';
 var indices = [];
 
 function gulpRemoveHtml(options){
-    var options = options || {};
+    var options = options || {keyword:"Deject"};
     var stream = through2.obj(function(chunk, enc, cb){
         //Does not support Streams
        if(chunk.isStream()){
@@ -18,19 +18,18 @@ function gulpRemoveHtml(options){
             The regular expression searches for a pattern that matches the open closing tags of deject.
             NOTE That these tags must be commented out for the plugin to reconise them.
             */
-            var dejectPatternRegex = /<!--\s*<(?:\/)?[Deject]+>\s*-->/ig;
+            var dejectPatternRegex = new RegExp(`<!--\s*<(?:\/)?[${options.keyword}]+>\s*-->`,"ig");
+
             if(options.dejectPatternRegex) dejectPatternRegex = options.dejectPatternRegex;
+
             var result;
+            
             while ((result = dejectPatternRegex.exec(fileContents))) {
               if (indices.length % 2) {
                 indices.push(dejectPatternRegex.lastIndex);
               }else {
                 indices.push(result.index);
               }
-            }
-            if (indices.length === 0) {
-              this.emit('error', new PluginError(PLUGIN_NAME, 'File does not contain the right tag'));
-              return cb();
             }
 
             while(indices.length != 0){
